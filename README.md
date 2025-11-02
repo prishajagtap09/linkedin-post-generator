@@ -19,8 +19,6 @@ This app also includes a data preprocessing pipeline that reads raw JSON posts, 
 * **Groq:** For access to the Llama 3.1 LLM.
 * **python-dotenv:** For managing the API key.
 
-
-
 📂 File Structure
 .
 ├── data/
