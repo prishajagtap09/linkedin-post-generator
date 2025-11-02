@@ -20,14 +20,22 @@ This app also includes a data preprocessing pipeline that reads raw JSON posts, 
 * **python-dotenv:** For managing the API key.
 
 📂 File Structure
-.
-├── data/
-│   ├── raw_posts.json        # Your raw input data
-│   └── processed_posts.json  # The cleaned & enriched output data
-├── .env                      # (To be created) Stores your secret API key
-├── .gitignore                # Tells Git to ignore venv, .env, etc.
-├── llm_helper.py             # Configures and exports the Groq LLM
-├── few_shots.py              # Reads processed_posts.json to get tags
-├── main.py                   # The main Streamlit application
-├── preprocess.py             # Script to process the raw JSON data
-└── README.md                 # This file
+/data/: This folder holds all project data.
+
+raw_posts.json: The original, raw input data.
+
+processed_posts.json: The cleaned and enriched data created by preprocess.py.
+
+.env: (You must create this) Stores your secret GROQ_API_KEY.
+
+.gitignore: Tells Git to ignore sensitive files like .env and venv/.
+
+llm_helper.py: Configures and exports the Groq LLM client.
+
+few_shots.py: Contains the logic to read processed_posts.json and extract the list of tags for the app.
+
+main.py: The main Streamlit application file. You run this to start the web app.
+
+preprocess.py: The one-time script to clean the raw data and prepare it for the app.
+
+README.md: This file.
